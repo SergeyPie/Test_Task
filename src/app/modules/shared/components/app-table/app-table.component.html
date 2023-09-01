@@ -5,7 +5,7 @@
         </tr>
     </thead>
     <tbody class="app-table__tbody">
-        <tr class="app-table__tr" ng-repeat="row in $ctrl.data track by $index">
+        <tr class="app-table__tr" ng-repeat="row in $ctrl.data track by $index" ng-click="$ctrl.onSelect({value:row})">
             <td class="app-table__td" ng-repeat="column in $ctrl.columns track by $index">{{ row[column.field] }}</td>
         </tr>
     </tbody>

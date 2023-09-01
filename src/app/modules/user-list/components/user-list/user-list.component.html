@@ -1,0 +1,13 @@
+
+
+
+<button class="app-button app-button--blue user-list-button" ui-sref="create">
+    Create User
+</button>
+
+<app-table
+    class="user-list"
+    on-select="$ctrl.handleSelectedItem(value)"
+    data="$ctrl.tableData"
+    columns="$ctrl.tableColumns">
+</app-table>

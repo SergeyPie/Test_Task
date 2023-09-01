@@ -1,0 +1,26 @@
+<div class="user-form">
+    <div class="user-form__header">
+        <div class="user-form__title">EDIT</div>
+        <img src="/img/icon-close.svg" alt="">
+    </div>
+
+    <app-form-field class="user-form__form-field" label="'Username*'" value="$ctrl.userForm.username"></app-form-field>
+    <app-form-field class="user-form__form-field" label="'First name*'" value="$ctrl.userForm.first_name"></app-form-field>
+    <app-form-field class="user-form__form-field" label="'Last name*'" value="$ctrl.userForm.last_name"></app-form-field>
+    <app-form-field class="user-form__form-field user-form__email-field" label="'Email*'" value="$ctrl.userForm.email"></app-form-field>
+    <app-selector class="user-form__form-field" label="'Type*'" items="$ctrl.userTypes" selected="$ctrl.userForm.user_type"></app-selector>
+    <app-form-field class="user-form__form-field" label="'Password*'" type="'password'" value="$ctrl.userForm.password"></app-form-field>
+    <app-form-field class="user-form__form-field" label="'Repeat Password*'" type="'password'" value="$ctrl.userForm.password"></app-form-field>
+
+    <button class="app-button app-button--red">
+        Delete
+    </button>
+
+    <button class="app-button app-button--blue">
+        Save
+    </button>
+</div>
+
+<pre>
+    {{ $ctrl.userForm | json}}
+</pre>

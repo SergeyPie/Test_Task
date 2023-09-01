@@ -1,5 +1,6 @@
 export const users = [
     {
+        "id": "1",
         "username": "johndoe95",
         "firstName": "John",
         "lastName": "Doe",
@@ -7,6 +8,7 @@ export const users = [
         "type": "Administrator"
     },
     {
+        "id": "2",
         "username": "janedoe72",
         "firstName": "Jane",
         "lastName": "Doe",
@@ -14,6 +16,7 @@ export const users = [
         "type": "User"
     },
     {
+        "id": "3",
         "username": "mikesmith29",
         "firstName": "Michael",
         "lastName": "Smith",
@@ -21,6 +24,7 @@ export const users = [
         "type": "Guest"
     },
     {
+        "id": "4",
         "username": "emilywilson87",
         "firstName": "Emily",
         "lastName": "Wilson",
@@ -28,6 +32,7 @@ export const users = [
         "type": "Administrator"
     },
     {
+        "id": "5",
         "username": "williamjohnson61",
         "firstName": "William",
         "lastName": "Johnson",
@@ -35,6 +40,7 @@ export const users = [
         "type": "User"
     },
     {
+        "id": "6",
         "username": "oliviamiller42",
         "firstName": "Olivia",
         "lastName": "Miller",
@@ -42,6 +48,7 @@ export const users = [
         "type": "Administrator"
     },
     {
+        "id": "7",
         "username": "jamestaylor18",
         "firstName": "James",
         "lastName": "Taylor",
@@ -49,6 +56,7 @@ export const users = [
         "type": "User"
     },
     {
+        "id": "8",
         "username": "sophiawilliams84",
         "firstName": "Sophia",
         "lastName": "Williams",
@@ -56,6 +64,7 @@ export const users = [
         "type": "Guest"
     },
     {
+        "id": "9",
         "username": "robertanderson77",
         "firstName": "Robert",
         "lastName": "Anderson",
@@ -63,6 +72,7 @@ export const users = [
         "type": "Administrator"
     },
     {
+        "id": "10",
         "username": "emmajones50",
         "firstName": "Emma",
         "lastName": "Jones",

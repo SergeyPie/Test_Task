@@ -1,0 +1,17 @@
+.app-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-form-field__input {
+  background: var(--gray-light-3);
+  padding: 16px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.app-form-field__label {
+  color: var(--gray);
+  font-size: 13px;
+}

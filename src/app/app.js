@@ -8,9 +8,8 @@ import { UserListModule } from './modules/user-list/user-list.module';
 import { SharedModule } from './modules/shared/shared.module';
 angular
   .module('app', [
-    'ui.router', 
-    UserListModule.name,
-    SharedModule.name])
+    'ui.router',
+    UserListModule.name])
   .component('home', HomeComponent)
   .config(AppRoutes)
   .config(['$locationProvider', ($locationProvider) => {

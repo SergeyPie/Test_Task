@@ -1,13 +1,35 @@
 :root {
-    --white: #ffffff;
-    --gray-light: #A4A4B5;
-    --gray-light-1: #F4F5F8;
-    --gray-light-2: #EEF0F8;
-    --gray-light-3: #F3F6F9;
-    --gray-light-4: #EFF0F4;
-    --gray: #3F4254;
-    --red: #F44682;
-    --red-light: #EF7DA0;
-    --blue: #2E8FF0;
-    --green: #66BB6A;
+  --white: #ffffff;
+  --gray-light: #A4A4B5;
+  --gray-light-1: #F4F5F8;
+  --gray-light-2: #EEF0F8;
+  --gray-light-3: #F3F6F9;
+  --gray-light-4: #EFF0F4;
+  --gray: #3F4254;
+  --red: #F44682;
+  --red-light: #EF7DA0;
+  --blue: #2E8FF0;
+  --green: #66BB6A;
+}
+
+body {
+  background: var(--gray-light-4);
+  font: normal normal normal 16px/19px Helvetica;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  max-width: 1320px;
+  outline: 1px solid red;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 2;
+}
+
+.aside {
+  flex: 1;
 }

@@ -1,15 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Test Task</title>
-  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <base href="/">
+    <meta charset="UTF-8">
+    <title>Test Task</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
 </head>
+
 <body>
-  <div ui-view="content" class="content"></div>
-  <div ui-view="aside" class="aside">
+    <main class="wrapper">
+        <div ui-view="content" class="content"></div>
+        <div ui-view="aside" class="aside">
+    </main>
 </body>
 </html>

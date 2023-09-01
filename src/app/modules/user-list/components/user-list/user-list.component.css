@@ -1,8 +1,18 @@
+user-list {
+  display: flex;
+  flex-direction: column;
+}
+
 .user-list {
     display: block;
-    border: 2px solid red;
     box-shadow: 0px 0px 30px #523F690D;
     border: 1px solid #EBEDF3;
     border-radius: 6px;
     padding-bottom: 78px;
+    overflow: hidden;
+}
+
+.user-list-button {
+  margin-left: auto;
+  margin-bottom: 16px;
 }

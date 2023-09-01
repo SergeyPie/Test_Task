@@ -5,6 +5,7 @@ export const AppTableComponent = {
     template,
     bindings: {
         data: '<',
-        columns: '<'
+        columns: '<',
+        onSelect: '&'
     }
 };

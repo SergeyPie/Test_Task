@@ -1,0 +1,42 @@
+.app-selector__select {
+  display: block;
+  color: #444;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--gray-light-3);
+  background-image: url('/img/icon-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right .7em top 50%, 0 0;
+  padding: 16px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.app-selector__select::-ms-expand {
+  display: none;
+}
+
+.app-selector__select:hover {
+  border-color: #888;
+}
+
+.app-selector__select:focus {
+  border-color: #aaa;
+  color: #222;
+  outline: none;
+  border: none;
+}
+
+.app-selector__select option {
+  font-weight: normal;
+}
+
+.app-selector__label{
+  color: var(--gray);
+  font-size: 13px;
+}

@@ -1,0 +1,9 @@
+<div class="app-selector">
+    <label class="app-selector__label" for="app-select">{{$ctrl.label}}</label>
+    <select
+        id="app-select"
+        class="app-selector__select"
+        ng-model="$ctrl.selected"
+        ng-options="item.value as item.label for item in $ctrl.items">
+    </select>
+</div>
