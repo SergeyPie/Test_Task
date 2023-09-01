@@ -1,38 +1,33 @@
 import template from './user-details-form.component.html';
 import './user-details-form.component.css'
+import userTypes from '../../userTypes';
 
 class UserDetailsFormController {
-  constructor($stateParams) {
+  constructor($stateParams, UserService) {
     'ngInject'
 
     this._$stateParams = $stateParams;
+    this._userService = UserService;
   }
 
   $onInit() {
-    console.log(this._$stateParams)
-    this.userTypes = [
-      {
-        label: 'Administrator',
-        value: 'Admin',
-      },
-      {
-        label: 'Driver',
-        value: 'Driver',
-      }
-    ]
+    this.userTypes = userTypes;
+    this.userForm = Object.assign({}, this.user)
+  }
 
-    this.userForm = {
-      username: 'testusername',
-      first_name: 'John',
-      last_name: 'Doe',
-      email: 'johndoe@mail.com',
-      password: 'test12334',
-      user_type: 'Admin'
-    }
+  delete() {
+    this._userService.deleteUser(this.user.id);
+  }
+
+  update() {
+    this._userService.updateUser(Object.assign({}, this.userForm));
   }
 }
 
 export const UserDetailsFormComponent = {
   template,
-  controller: UserDetailsFormController
+  controller: UserDetailsFormController,
+  bindings: {
+    user: '<'
+  }
 };

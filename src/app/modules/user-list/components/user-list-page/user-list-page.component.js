@@ -19,5 +19,8 @@ class UserListPageController {
 
 export const UserListPageComponent = {
   template,
-  controller: UserListPageController
+  controller: UserListPageController,
+  bindings: {
+    users: '<'
+  }
 };

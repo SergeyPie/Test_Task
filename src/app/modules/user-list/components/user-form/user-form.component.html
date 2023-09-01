@@ -1,26 +1,74 @@
 <div class="user-form">
     <div class="user-form__header">
         <div class="user-form__title">Create new user</div>
-        <img src="/img/icon-close.svg" alt="">
+        <img src="/img/icon-close.svg" ui-sref="users" alt="close">
     </div>
 
-    <app-form-field class="user-form__form-field" label="'Username*'" value="$ctrl.userForm.username"></app-form-field>
-    <app-form-field class="user-form__form-field" label="'First name*'" value="$ctrl.userForm.first_name"></app-form-field>
-    <app-form-field class="user-form__form-field" label="'Last name*'" value="$ctrl.userForm.last_name"></app-form-field>
-    <app-form-field class="user-form__form-field user-form__email-field" label="'Email*'" value="$ctrl.userForm.email"></app-form-field>
-    <app-selector class="user-form__form-field" label="'Type*'" items="$ctrl.userTypes" selected="$ctrl.userForm.user_type"></app-selector>
-    <app-form-field class="user-form__form-field" label="'Password*'" type="'password'" value="$ctrl.userForm.password"></app-form-field>
-    <app-form-field class="user-form__form-field" label="'Repeat Password*'" type="'password'" value="$ctrl.userForm.password"></app-form-field>
+    <form name="newUserForm">
+        <app-form-field
+            class="user-form__form-field"
+            name="'username'"
+            form="newUserForm"
+            label="'Username*'"
+            value="$ctrl.userForm.username">
+        </app-form-field>
 
-    <button class="app-button app-button--red">
-        Delete
-    </button>
+        <app-form-field
+            class="user-form__form-field"
+            name="'first_name'"
+            form="newUserForm"
+            label="'First name*'"
+            value="$ctrl.userForm.first_name">
+        </app-form-field>
 
-    <button class="app-button app-button--blue">
-        Save
-    </button>
+        <app-form-field
+            class="user-form__form-field"
+            name="'last_name'"
+            form="newUserForm"
+            label="'Last name*'"
+            value="$ctrl.userForm.last_name">
+        </app-form-field>
+
+        <app-form-field
+            class="user-wform__form-field user-form__email-field"
+            name="'email'"
+            form="newUserForm"
+            label="'Email*'"
+            type="'email'"
+            value="$ctrl.userForm.email">
+        </app-form-field>
+
+        <app-selector
+            class="user-form__form-field"
+            userform="userFormFields"
+            label="'Type*'"
+            items="$ctrl.userTypes"
+            selected="$ctrl.userForm.user_type">
+        </app-selector>
+
+        <app-form-field
+            class="user-form__form-field"
+            name="'password'"
+            form="newUserForm"
+            label="'Password*'"
+            type="'password'"
+            value="$ctrl.userForm.password">
+        </app-form-field>
+
+        <app-form-field
+            class="user-form__form-field"
+            name="'repeatPassword'"
+            form="newUserForm"
+            label="'Repeat Password*'"
+            type="'password'"
+            value="$ctrl.userForm.repeatPassword">
+        </app-form-field>
+
+        <button ng-click="$ctrl.save()" type="submit" class="app-button app-button--blue user-form__save-button">
+            Save
+        </button>
+
+    </form>
+
+
 </div>
-
-<pre>
-    {{ $ctrl.userForm | json}}
-</pre>

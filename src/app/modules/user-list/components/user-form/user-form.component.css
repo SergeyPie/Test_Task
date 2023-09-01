@@ -33,3 +33,9 @@
   background-position: 13px;
   padding-left: 42px;
 }
+
+.user-form__save-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 33px;
+}

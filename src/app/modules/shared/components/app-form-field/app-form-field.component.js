@@ -6,6 +6,8 @@ export const AppFormFieldComponent = {
   bindings: {
     label: '<',
     type: '<',
+    form: '<',
+    name: '<',
     value: '='
   }
 };

@@ -1,7 +1,7 @@
 <div class="user-form">
     <div class="user-form__header">
-        <div class="user-form__title">EDIT</div>
-        <img src="/img/icon-close.svg" alt="">
+        <div class="user-form__title">{{$ctrl.userForm.first_name + ' ' + $ctrl.userForm.last_name}}</div>
+        <img ui-sref="users" src="/img/icon-close.svg" alt="close">
     </div>
 
     <app-form-field class="user-form__form-field" label="'Username*'" value="$ctrl.userForm.username"></app-form-field>
@@ -12,15 +12,13 @@
     <app-form-field class="user-form__form-field" label="'Password*'" type="'password'" value="$ctrl.userForm.password"></app-form-field>
     <app-form-field class="user-form__form-field" label="'Repeat Password*'" type="'password'" value="$ctrl.userForm.password"></app-form-field>
 
-    <button class="app-button app-button--red">
-        Delete
-    </button>
+    <div class="user-details-form__footer">
+        <button ng-click="$ctrl.delete()" class="app-button app-button--red" type="button">
+            Delete
+        </button>
 
-    <button class="app-button app-button--blue">
-        Save
-    </button>
+        <button ng-click="$ctrl.update()" class="app-button app-button--blue" type="button">
+            Save
+        </button>
+    </div>
 </div>
-
-<pre>
-    {{ $ctrl.userForm | json}}
-</pre>

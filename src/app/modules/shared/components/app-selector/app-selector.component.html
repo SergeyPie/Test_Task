@@ -4,6 +4,6 @@
         id="app-select"
         class="app-selector__select"
         ng-model="$ctrl.selected"
-        ng-options="item.value as item.label for item in $ctrl.items">
+        ng-options="item as item for item in $ctrl.items">
     </select>
 </div>

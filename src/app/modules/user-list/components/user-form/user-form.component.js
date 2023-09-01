@@ -1,23 +1,17 @@
 import template from './user-form.component.html';
 import './user-form.component.css'
+import userTypes from '../../userTypes';
 
 class UserFormController {
-  constructor() {
+  constructor(UserService,$state) {
     'ngInject'
+
+    this._userService = UserService;
+    this._$state = $state;
   }
 
   $onInit() {
-
-    this.userTypes = [
-      {
-        label: 'Administrator',
-        value: 'Admin',
-      },
-      {
-        label: 'Driver',
-        value: 'Driver',
-      }
-    ]
+    this.userTypes = userTypes;
 
     this.userForm = {
       username: '',
@@ -25,8 +19,13 @@ class UserFormController {
       last_name: '',
       email: '',
       password: '',
-      user_type: ''
-    }
+      user_type: 'Admin'
+    };
+  }
+
+  save() {
+    this._userService.createUser(Object.assign({id: Date.now().toString()}, this.userForm));
+    this._$state.go('users')
   }
 }
 

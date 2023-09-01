@@ -1,6 +1,5 @@
 import template from './user-list.component.html';
 import './user-list.component.css'
-import { users } from '../../../../../assets/mock-data'
 
 class UserListController {
   constructor($state) {
@@ -10,23 +9,24 @@ class UserListController {
   }
 
   $onInit() {
-    this.tableData = users;
-
     this.tableColumns = [
       { label: "Username", field: "username" },
-      { label: "First Name", field: "firstName" },
-      { label: "Last Name", field: "lastName" },
+      { label: "First Name", field: "first_name" },
+      { label: "Last Name", field: "last_name" },
       { label: "Email", field: "email" },
-      { label: "Type", field: "type" }
+      { label: "Type", field: "user_type" }
     ];
   }
 
   handleSelectedItem(item) {
-    this._$state.go('edit', { userId: item.id })
+    this._$state.go('users.edit', { userId: item.id })
   }
 }
 
 export const UserListComponent = {
   template,
-  controller: UserListController
+  controller: UserListController,
+  bindings: {
+    users: '<'
+  }
 };
