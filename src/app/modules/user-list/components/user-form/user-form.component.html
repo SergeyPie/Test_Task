@@ -4,7 +4,7 @@
         <img src="/img/icon-close.svg" ui-sref="users" alt="close">
     </div>
 
-    <form name="newUserForm">
+    <form name="newUserForm" ng-submit="$ctrl.save()" novalidate>
         <app-form-field
             class="user-form__form-field"
             name="'username'"
@@ -30,7 +30,7 @@
         </app-form-field>
 
         <app-form-field
-            class="user-wform__form-field user-form__email-field"
+            class="user-form__form-field user-form__email-field"
             name="'email'"
             form="newUserForm"
             label="'Email*'"
@@ -57,18 +57,18 @@
 
         <app-form-field
             class="user-form__form-field"
-            name="'repeatPassword'"
+            name="'repeat_password'"
             form="newUserForm"
             label="'Repeat Password*'"
             type="'password'"
-            value="$ctrl.userForm.repeatPassword">
+            value="$ctrl.userForm.repeat_password">
         </app-form-field>
 
-        <button ng-click="$ctrl.save()" type="submit" class="app-button app-button--blue user-form__save-button">
-            Save
+        <!-- ng-disabled="newUserForm.$invalid || $ctrl.isLoading" -->
+
+        <button type="submit" ng-disabled="$ctrl.isLoading" class="app-button app-button--blue user-form__save-button">
+            {{ $ctrl.isLoading ? 'Processing...' : 'Create'}}
         </button>
 
     </form>
-
-
 </div>

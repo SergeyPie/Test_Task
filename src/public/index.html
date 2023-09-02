@@ -10,5 +10,9 @@
 
 <body>
     <ui-view></ui-view>
+
+    <div class="container alerts__container">
+        <app-notification ng-repeat="notification in notifications" notification="notification"></app-notification>
+    </div>
 </body>
 </html>

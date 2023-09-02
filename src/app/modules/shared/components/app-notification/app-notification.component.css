@@ -1,0 +1,16 @@
+.app-notification {
+  border-radius: 6px;
+  padding: 22px 26px;
+  color: var(--white);
+  font-size: 13px;
+}
+
+.app-notification--error {
+  background-color: var(--red-light);
+  box-shadow: 0px 10px 15px #EF7DA05C;
+}
+
+.app-notification--success {
+  background-color: var(--green);
+  box-shadow: 0px 10px 15px #4CAF505C;
+}

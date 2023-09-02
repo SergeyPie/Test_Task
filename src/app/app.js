@@ -5,6 +5,8 @@ import '@uirouter/angularjs';
 import { AppRoutes } from './routes/routes';
 import { UserListModule } from './modules/user-list/user-list.module';
 import { UserService } from './modules/user-list/services/user.service';
+
+import { NotificationService } from './modules/shared/services/notification.service';
 angular
   .module('app', [
     'ui.router',
@@ -18,10 +20,10 @@ angular
       .otherwise('/404');
 
     $locationProvider.html5Mode(true);
-  }]);
+  }])
+  .factory('NotificationService', NotificationService);
+
 
 angular.element(document).ready(() => {
   angular.bootstrap(document, ['app'], { strictDi: false });
 });
-
-

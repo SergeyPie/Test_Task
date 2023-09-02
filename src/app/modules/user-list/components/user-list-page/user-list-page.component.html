@@ -1,4 +1,14 @@
-<main class="wrapper">
-    <user-list users="$ctrl.users"></user-list>
-    <div ui-view="aside" class="aside">
-</main>
+<div class="container">
+    <div class="user-list-page">
+        <button class="app-button app-button--blue user-list-page__create_button item-1" ui-sref="users.create">
+            Create User
+        </button>
+        <div class="user-list-page__aside" ui-view="aside"></div>
+
+        <div class="user-list-page__content">
+            <user-list users="$ctrl.users"></user-list>
+        </div>
+    </div>
+</div>
+
+

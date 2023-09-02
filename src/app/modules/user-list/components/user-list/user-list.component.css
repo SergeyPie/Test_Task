@@ -5,14 +5,9 @@ user-list {
 
 .user-list {
     display: block;
-    box-shadow: 0px 0px 30px #523F690D;
-    border: 1px solid #EBEDF3;
+    border-bottom: 1px solid var(--white);
+    background: var(--white);
     border-radius: 6px;
     padding-bottom: 78px;
     overflow: hidden;
-}
-
-.user-list-button {
-  margin-left: auto;
-  margin-bottom: 16px;
 }

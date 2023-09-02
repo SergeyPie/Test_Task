@@ -1,0 +1,24 @@
+user-list-page {
+  padding: 50px 0;
+  width: 100%;
+}
+
+.user-list-page__content {
+  direction: ltr;
+}
+
+.user-list-page__aside {
+  direction: ltr;
+}
+
+.user-list-page {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  direction: rtl;
+  gap: 16px 22px;
+}
+
+.user-list-page__create_button {
+  grid-column: 2 / -1;
+  margin-left: auto;
+}

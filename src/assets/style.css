@@ -12,24 +12,38 @@
   --green: #66BB6A;
 }
 
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background: var(--gray-light-4);
   font: normal normal normal 16px/19px Helvetica;
 }
 
-.wrapper {
+ui-view {
   display: flex;
-  flex-wrap: wrap;
-  gap: 26px;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container {
   max-width: 1320px;
-  outline: 1px solid red;
-  margin: 0 auto;
+  margin: auto;
+  width: 100%;
 }
 
-.content {
-  flex: 2;
-}
-
-.aside {
-  flex: 1;
+.alerts__container {
+  position: fixed;
+  width: 100%;
+  right: 0;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+  z-index: -1;
 }
