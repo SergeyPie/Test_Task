@@ -64,11 +64,8 @@
             value="$ctrl.userForm.repeat_password">
         </app-form-field>
 
-        <!-- ng-disabled="newUserForm.$invalid || $ctrl.isLoading" -->
-
-        <button type="submit" ng-disabled="$ctrl.isLoading" class="app-button app-button--blue user-form__save-button">
+        <app-button disabled="$ctrl.isLoading" class="user-form__save-button" color="'blue'" type="'submit'">
             {{ $ctrl.isLoading ? 'Processing...' : 'Create'}}
-        </button>
-
+        </app-button>
     </form>
 </div>

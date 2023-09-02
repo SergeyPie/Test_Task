@@ -27,7 +27,7 @@
   margin-bottom: 16px;
 }
 
-.user-form__email-field input{
+.user-form__email-field input {
   background-image: url('/img/icon-email-input.svg');
   background-repeat: no-repeat;
   background-position: 13px;
@@ -35,7 +35,8 @@
 }
 
 .user-form__save-button {
-  display: block;
-  margin: 0 auto;
+  display: inline-flex;
+  justify-content: center;
   margin-top: 33px;
+  width: 100%;
 }

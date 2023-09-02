@@ -27,7 +27,6 @@ class UserFormController {
   }
 
   save(form) {
-
     if(form.$invalid) {
       return this._notificationService.add('error', "Form is incorrect");
     }

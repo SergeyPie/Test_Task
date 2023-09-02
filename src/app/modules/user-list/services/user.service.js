@@ -47,7 +47,6 @@ export class UserService {
   _emulateServerErrors(newUser) {
     return new Promise((resolve, reject) => {
 
-
       const isDuplicateUsername = this.users.find((user) => (user.username === newUser.username) && (user.id !== newUser.id));
       const isDuplicateEmail = this.users.find((user) => (user.email === newUser.email) && (user.id !== newUser.id));
 

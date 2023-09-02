@@ -64,14 +64,13 @@
             value="$ctrl.userForm.repeat_password">
         </app-form-field>
         <div class="user-details-form__footer">
-            <button ng-click="$ctrl.delete()" ng-disabled="$ctrl.isLoading" class="app-button app-button--red" type="button">
+            <app-button ng-click="$ctrl.delete()" color="'red'" type="'button'">
                 Delete
-            </button>
+            </app-button>
 
-            <button type="submit" ng-disabled="$ctrl.isLoading" class="app-button app-button--blue">
+            <app-button disabled="$ctrl.isLoading" type="'submit'">
                 {{ $ctrl.isLoading ? 'Processing...' : 'Save'}}
-            </button>
+            </app-button>
         </div>
     </form>
-
 </div>

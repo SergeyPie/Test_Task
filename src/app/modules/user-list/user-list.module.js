@@ -10,7 +10,4 @@ export const UserListModule = angular.module('app.userList', [SharedModule.name]
   .component('userList', UserListComponent)
   .component('userForm', UserFormComponent)
   .component('userDetailsForm', UserDetailsFormComponent)
-  .component('userListPage', UserListPageComponent)
-
-
-  ;
+  .component('userListPage', UserListPageComponent);

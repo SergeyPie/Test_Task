@@ -1,6 +1,5 @@
-export const AppRoutes = ($stateProvider, $urlRouterProvider) => {
+export const AppRoutes = ($stateProvider) => {
   'ngInject';
-
 
   return $stateProvider
     .state('app', {

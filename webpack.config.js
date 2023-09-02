@@ -4,10 +4,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 
-
-var ENV = process.env.npm_lifecycle_event ;
-var isProd = ENV === 'build';
-
 module.exports = {
   entry: {
     app: './src/app/app.js'
@@ -15,8 +11,8 @@ module.exports = {
   output: {
     path: __dirname + '/dist',
     publicPath: '/',
-    filename: isProd ? '[name].[hash].js' : '[name].bundle.js',
-    chunkFilename: isProd ? '[name].[hash].js' : '[name].bundle.js'
+    filename:  '[name].bundle.js',
+    chunkFilename:  '[name].bundle.js'
   },
   devtool: 'inline-source-map',
   module: {
@@ -57,7 +53,7 @@ module.exports = {
       template: './src/public/index.html',
       inject: 'body'
     }),
-    new ExtractTextPlugin({ filename: 'css/[name].css', disable: !isProd, allChunks: true })
+    new ExtractTextPlugin({ filename: 'css/[name].css', allChunks: true })
   ],
   devServer: {
     contentBase: './src/public',
