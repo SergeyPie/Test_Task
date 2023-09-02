@@ -34,6 +34,8 @@ ui-view {
   max-width: 1320px;
   margin: auto;
   width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .alerts__container {

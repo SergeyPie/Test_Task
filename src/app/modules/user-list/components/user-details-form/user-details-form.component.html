@@ -4,7 +4,7 @@
         <img ui-sref="users" src="/img/icon-close.svg" alt="close">
     </div>
 
-    <form name="newUserForm" ng-submit="$ctrl.save()" novalidate>
+    <form name="newUserForm" ng-submit="$ctrl.update()" novalidate>
         <app-form-field
             class="user-form__form-field"
             name="'username'"
@@ -68,7 +68,7 @@
                 Delete
             </button>
 
-            <button ng-click="$ctrl.update()" ng-disabled="$ctrl.isLoading" class="app-button app-button--blue" type="button">
+            <button type="submit" ng-disabled="$ctrl.isLoading" class="app-button app-button--blue">
                 {{ $ctrl.isLoading ? 'Processing...' : 'Save'}}
             </button>
         </div>

@@ -1,22 +1,10 @@
-<div class="app-form-field"
-    ng-class="{ 'app-form-field--error' :
-    (
-        $ctrl.form[$ctrl.name].$dirty && $ctrl.form[$ctrl.name].$error.required ||
-        $ctrl.form[$ctrl.name].$touched && $ctrl.form[$ctrl.name].$error.email ||
-        $ctrl.form[$ctrl.name].$touched && $ctrl.form[$ctrl.name].$error.pattern
-    )
-    }">
+<div class="app-form-field">
     <label for="" class="app-form-field__label">{{$ctrl.label}}</label>
     <input
         required
         form-field-validation
-        class="app-form-field__input"
+        class="app-form-field-input"
         name="{{$ctrl.name}}"
         type="{{$ctrl.type || 'text'}}"
         ng-model="$ctrl.value">
-    <div class="app-form-field__error-hint" ng-if="$ctrl.form.$error.customUserValidation">
-        <span ng-if="$ctrl.form[$ctrl.name].$invalid && $ctrl.form[$ctrl.name].$dirty && $ctrl.form[$ctrl.name].$error.required">This field is required.</span>
-        <span ng-if="$ctrl.form[$ctrl.name].$touched && $ctrl.form[$ctrl.name].$error.email">Invalid email address.</span>
-        <span ng-if="$ctrl.form[$ctrl.name].$touched && $ctrl.form[$ctrl.name].$error.pattern">Invalid password format.</span>
-    </div>
 </div>
