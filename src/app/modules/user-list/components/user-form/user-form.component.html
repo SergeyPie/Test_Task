@@ -4,7 +4,7 @@
         <img src="/img/icon-close.svg" ui-sref="users" alt="close">
     </div>
 
-    <form name="newUserForm" ng-submit="$ctrl.save()" novalidate>
+    <form name="newUserForm" ng-submit="$ctrl.save(newUserForm)" novalidate>
         <app-form-field
             class="user-form__form-field"
             name="'username'"

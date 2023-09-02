@@ -3,7 +3,7 @@ import './user-details-form.component.css'
 import userTypes from '../../userTypes';
 
 class UserDetailsFormController {
-  constructor(UserService, $state, NotificationService,$scope) {
+  constructor(UserService, $state, NotificationService, $scope) {
     'ngInject'
 
     this._userService = UserService;
@@ -14,7 +14,7 @@ class UserDetailsFormController {
 
   $onInit() {
     this.userTypes = userTypes;
-    this.userForm = Object.assign({}, this.user)
+    this.userForm = Object.assign({}, this.user);
   }
 
   delete() {
@@ -22,17 +22,21 @@ class UserDetailsFormController {
     this._$state.go('users');
   }
 
-  update() {
+  update(form) {
+    if (form.$invalid) {
+      return this._notificationService.add('error', "Form is incorrect");
+    }
+
     this.isLoading = true
     this._userService.updateUser(Object.assign({}, this.userForm))
       .then(() => {
         this.isLoading = false;
-        this._$scope.$apply(() => this._notificationService.add('success', 'Successfully updated!'))
+        this._$scope.$apply(() => this._notificationService.add('success', 'Successfully updated!'));
         this._$state.go('users');
       })
       .catch((error) => {
         this.isLoading = false;
-        this._$scope.$apply(() => this._notificationService.add('error', error))
+        this._$scope.$apply(() => this._notificationService.add('error', error));
       })
   }
 }

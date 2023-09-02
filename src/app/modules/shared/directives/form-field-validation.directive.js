@@ -48,7 +48,7 @@ export const FormFieldValidationDirective = function () {
           removeErrorHint(element);
         }
 
-        return firstValidator && firstValidator.isValid;
+        return true;
       };
     }
   };

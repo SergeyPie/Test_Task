@@ -26,7 +26,12 @@ class UserFormController {
     };
   }
 
-  save() {
+  save(form) {
+
+    if(form.$invalid) {
+      return this._notificationService.add('error', "Form is incorrect");
+    }
+
     this.isLoading = true
     this._userService.createUser(Object.assign({ id: Date.now().toString() }, this.userForm))
       .then(() => {
